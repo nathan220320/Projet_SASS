@@ -5,6 +5,10 @@ $border: solid 1px #000
 $primary: #FEFEFE
 $bord-rad: 15px
 
+*
+    font-family: monospace
+    font-size: 15px
+
 body
     background: #F6F8FF
     height: 98vh
@@ -12,31 +16,51 @@ body
 
 
 main
-    border: $border
-    width: 60vw
-    height: 80vh
+    width: 730px
+    height: 586px
     +flexAll
     flex-direction: column
     justify-content: space-between
 
 .title
     width: $taille
-    height: 10vh
+    height: 38px
     border: $border
     +flexLigne
+    p
+        font-weight: bold
+        font-size: 26px 
+    
    
 
 .search
     width: $taille
-    height: 10vh
-    border: $border
+    height: 69px
     background: $primary
     border-radius: $bord-rad
     +flexLigne
+    img
+        margin-left: 32px
+
+    input
+        border-radius: $bord-rad
+        border: none
+        width: 60%
+        margin-right: 100px 
+
+    button
+        width: 106px
+        height: 50px
+        border-radius: $bord-rad
+        background: #0079FF
+        border: none
+        margin-right: 10px
+        font-weight: bold
+        color: #FFFFFF
+
 
 .result
     width: $taille
-    height: 50vh
-    border: $border
+    height: 419px
     background: $primary
     border-radius: $bord-rad
