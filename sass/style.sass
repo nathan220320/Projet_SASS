@@ -4,10 +4,14 @@ $taille: 100%
 $border: solid 1px #000
 $primary: #FEFEFE
 $bord-rad: 15px
+$color-ctn: #0079FF
 
 *
     font-family: monospace
     font-size: 15px
+    margin: 0
+    padding: 0
+    
 
 body
     background: #F6F8FF
@@ -21,11 +25,11 @@ main
     +flexAll
     flex-direction: column
     justify-content: space-between
+    
 
 .title
     width: $taille
     height: 38px
-    border: $border
     +flexLigne
     p
         font-weight: bold
@@ -47,12 +51,15 @@ main
         border: none
         width: 60%
         margin-right: 100px 
+        outline: none
+        color: $color-ctn
+        font-size: 18px
 
     button
         width: 106px
         height: 50px
         border-radius: $bord-rad
-        background: #0079FF
+        background: $color-ctn
         border: none
         margin-right: 10px
         font-weight: bold
@@ -65,7 +72,7 @@ main
     background: $primary
     border-radius: $bord-rad
     display: grid
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: 202px 251px 277px
     grid-template-rows: repeat(3, 1fr)
     grid-template-areas:  "img prest join" "img stats stats" "img contact contact"
    
@@ -74,20 +81,40 @@ main
 
 
 .img
-    border: $border
+
     grid-area: img
 
+    img
+        margin-left: 48px
+        margin-top: 48px
+    
+
 .prest
-    border: $border
+    
     grid-area: prest
+    h1
+        font-size: 26px
+        margin-top: 48px 
+        margin-bottom: 20px
+
+    h2
+        font-size: 22px
+        color: $color-ctn
+        margin-bottom: 33px
 
 .join
-    border: $border
+    display: flex
+    justify-content: flex-end
+    
     grid-area: join
+    p
+        margin-top: 48px
+        margin-right: 49px
 
 .stats
     border: $border
     grid-area: stats
+    
 
 .contact
     border: $border

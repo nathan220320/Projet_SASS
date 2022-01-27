@@ -1,6 +1,8 @@
 * {
   font-family: monospace;
   font-size: 15px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -24,7 +26,6 @@ main {
 .title {
   width: 100%;
   height: 38px;
-  border: solid 1px #000;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -53,6 +54,9 @@ main {
   border: none;
   width: 60%;
   margin-right: 100px;
+  outline: none;
+  color: #0079FF;
+  font-size: 18px;
 }
 .search button {
   width: 106px;
@@ -71,24 +75,41 @@ main {
   background: #FEFEFE;
   border-radius: 15px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 202px 251px 277px;
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas: "img prest join" "img stats stats" "img contact contact";
 }
 
 .img {
-  border: solid 1px #000;
   grid-area: img;
+}
+.img img {
+  margin-left: 48px;
+  margin-top: 48px;
 }
 
 .prest {
-  border: solid 1px #000;
   grid-area: prest;
+}
+.prest h1 {
+  font-size: 26px;
+  margin-top: 48px;
+  margin-bottom: 20px;
+}
+.prest h2 {
+  font-size: 22px;
+  color: #0079FF;
+  margin-bottom: 33px;
 }
 
 .join {
-  border: solid 1px #000;
+  display: flex;
+  justify-content: flex-end;
   grid-area: join;
+}
+.join p {
+  margin-top: 48px;
+  margin-right: 49px;
 }
 
 .stats {
