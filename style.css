@@ -21,6 +21,9 @@ main {
   width: 100%;
   height: 10vh;
   border: solid 1px #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .search {
@@ -29,6 +32,9 @@ main {
   border: solid 1px #000;
   background: #FEFEFE;
   border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .result {
