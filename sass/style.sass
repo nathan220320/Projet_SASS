@@ -1,5 +1,10 @@
 @import "libs/mixins.scss"
-    
+
+$taille: 100%
+$border: solid 1px #000
+$primary: #FEFEFE
+$bord-rad: 15px
+
 body
     background: #F6F8FF
     height: 98vh
@@ -7,6 +12,29 @@ body
 
 
 main
-    border: solid 1px #000
+    border: $border
     width: 60vw
     height: 80vh
+    +flexAll
+    flex-direction: column
+    justify-content: space-between
+
+.title
+    width: $taille
+    height: 10vh
+    border: $border
+   
+
+.search
+    width: $taille
+    height: 10vh
+    border: $border
+    background: $primary
+    border-radius: $bord-rad
+
+.result
+    width: $taille
+    height: 50vh
+    border: $border
+    background: $primary
+    border-radius: $bord-rad
