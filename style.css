@@ -113,8 +113,33 @@ main {
 }
 
 .stats {
-  border: solid 1px #000;
   grid-area: stats;
+}
+.stats .back {
+  margin-top: 38px;
+  height: 85px;
+  width: 480px;
+  background: #97979721;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.haut {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.bas {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .contact {
