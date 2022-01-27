@@ -64,3 +64,31 @@ main
     height: 419px
     background: $primary
     border-radius: $bord-rad
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(3, 1fr)
+    grid-template-areas:  "img prest join" "img stats stats" "img contact contact"
+   
+
+
+
+
+.img
+    border: $border
+    grid-area: img
+
+.prest
+    border: $border
+    grid-area: prest
+
+.join
+    border: $border
+    grid-area: join
+
+.stats
+    border: $border
+    grid-area: stats
+
+.contact
+    border: $border
+    grid-area: contact

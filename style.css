@@ -70,6 +70,35 @@ main {
   height: 419px;
   background: #FEFEFE;
   border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "img prest join" "img stats stats" "img contact contact";
+}
+
+.img {
+  border: solid 1px #000;
+  grid-area: img;
+}
+
+.prest {
+  border: solid 1px #000;
+  grid-area: prest;
+}
+
+.join {
+  border: solid 1px #000;
+  grid-area: join;
+}
+
+.stats {
+  border: solid 1px #000;
+  grid-area: stats;
+}
+
+.contact {
+  border: solid 1px #000;
+  grid-area: contact;
 }
 
 /*# sourceMappingURL=style.css.map */
