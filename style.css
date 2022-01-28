@@ -102,6 +102,9 @@ main {
   color: #0079FF;
   margin-bottom: 33px;
 }
+.prest p {
+  color: #4B6A9B;
+}
 
 .join {
   display: flex;
@@ -111,6 +114,7 @@ main {
 .join p {
   margin-top: 48px;
   margin-right: 49px;
+  color: #697C9A;
 }
 
 .stats {
@@ -131,8 +135,20 @@ main {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  margin-top: 20px;
+  color: #4B6A9B;
+  margin-top: 15px;
+}
+
+.repos {
+  margin-left: 6%;
+}
+
+.follower {
+  margin-left: 20%;
+}
+
+.following {
+  margin-left: 15%;
 }
 
 .bas {
@@ -147,40 +163,59 @@ main {
 }
 
 .rslt1 {
-  margin-left: 10%;
+  margin-left: 6%;
 }
 
 .rslt2 {
-  margin-left: 25.5%;
+  margin-left: 25%;
 }
 
 .rslt3 {
-  margin-left: 23.5%;
+  margin-left: 18.5%;
 }
 
 .contact {
-  border: solid 1px #000;
   grid-area: contact;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas: "adresse twiter" "blog git";
 }
+.contact p {
+  margin-left: 7%;
+  color: #4B6A9B;
+}
+.contact i {
+  color: #4B6A9B;
+  font-size: 20px;
+}
 
 .adresse {
   grid-area: adresse;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10%;
 }
 
 .twiter {
   grid-area: twiter;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10%;
 }
 
 .blog {
   grid-area: blog;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
 }
 
 .git {
   grid-area: git;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
 }
 
 /*# sourceMappingURL=style.css.map */

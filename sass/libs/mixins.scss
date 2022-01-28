@@ -10,3 +10,8 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@mixin flexContact{
+    display: flex;
+    flex-direction: row;
+}
