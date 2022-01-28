@@ -1,4 +1,5 @@
 @import "libs/mixins.scss"
+@import "libs/responsive.scss"
 
 $taille: 100%
 $border: solid 1px #000
@@ -12,6 +13,7 @@ $margin: 10%
     font-size: 15px
     margin: 0
     padding: 0
+
     
 
 body
@@ -22,11 +24,11 @@ body
 
 main
     width: 730px
-    height: 586px
+    height: auto
     +flexAll
     flex-direction: column
-    justify-content: space-between
     
+
 
 .title
     width: $taille
@@ -39,6 +41,7 @@ main
    
 
 .search
+    margin-top: 2%
     width: $taille
     height: 69px
     background: $primary
@@ -68,14 +71,17 @@ main
 
 
 .result
+    margin-top: 3.5%
     width: $taille
     height: 419px
     background: $primary
     border-radius: $bord-rad
     display: grid
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567)
+    border-radius: 15px
     grid-template-columns: 202px 251px 277px
     grid-template-rows: repeat(3, 1fr)
-    grid-template-areas:  "img prest join" "img stats stats" "img contact contact"
+    grid-template-areas:  "img prest prest" "img stats stats" "img contact contact"
    
 
 
@@ -91,7 +97,9 @@ main
     
 
 .prest
-    
+    max-height: 200px
+    display: flex
+    flex-direction: row
     grid-area: prest
     h1
         font-size: 26px
@@ -108,9 +116,13 @@ main
         color: #4B6A9B
 
 .join
+    position: absolute
+    right: 30.9%
+
+.join
     display: flex
     justify-content: flex-end
-    
+    margin-left: 26.5%
     grid-area: join
     p
         margin-top: 48px
@@ -205,3 +217,25 @@ main
     +flexContact
     margin-top: 2%
     
+
+@media #{$medium-up}
+
+
+    body
+        
+    main
+        width: 573px
+        height: 700px
+
+    .result
+        display: grid
+        grid-template-columns: 150px 423px
+        grid-template-rows: repeat(4, 1fr)
+        grid-template-areas: "img prest" "stats stats" "contact contact"
+
+.prest
+    flex-direction: column
+
+.img
+    margin-left: -20px
+        
