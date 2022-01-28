@@ -95,6 +95,7 @@ main {
   font-size: 26px;
   margin-top: 48px;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 .prest h2 {
   font-size: 22px;
@@ -130,7 +131,7 @@ main {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 20px;
 }
 
@@ -138,13 +139,48 @@ main {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 5px;
+}
+.bas p {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.rslt1 {
+  margin-left: 10%;
+}
+
+.rslt2 {
+  margin-left: 25.5%;
+}
+
+.rslt3 {
+  margin-left: 23.5%;
 }
 
 .contact {
   border: solid 1px #000;
   grid-area: contact;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "adresse twiter" "blog git";
+}
+
+.adresse {
+  grid-area: adresse;
+}
+
+.twiter {
+  grid-area: twiter;
+}
+
+.blog {
+  grid-area: blog;
+}
+
+.git {
+  grid-area: git;
 }
 
 /*# sourceMappingURL=style.css.map */
