@@ -81,32 +81,24 @@ main
     border-radius: 15px
     grid-template-columns: 202px 251px 277px
     grid-template-rows: repeat(3, 1fr)
-    grid-template-areas:  "img prest prest" "img stats stats" "img contact contact"
+    grid-template-areas:  "prest prest prest" "sats stats stats" "conatc contact contact"
    
 
 
 
 
-.img
-
-    grid-area: img
-
-    img
-        margin-left: 48px
-        margin-top: 48px
-    
 
 .prest
     max-height: 200px
     width: 100%
     grid-area: prest
     display: grid
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: 28% 1fr 1fr
     grid-template-rows: repeat(2, 1fr)
-    grid-template-areas: "nom join" "prof prof"
+    grid-template-areas: "image nom join" "image prof prof"
     h1
         font-size: 26px
-        margin-top: 48px 
+        margin-top: 16% 
         margin-bottom: 20px
         font-weight: bold
 
@@ -118,13 +110,25 @@ main
     p
         color: #4B6A9B
 
+.img
+
+    grid-area: image
+
+    img
+        margin-left: 23%
+        margin-top: 23%
+    
+
+
 .nom
     grid-area: nom
-    margin-top: 28px 
+  
+
 
 .prof
     grid-area: prof
-    margin-top: 2%
+    margin-right: 3%
+    
 
 .join
     grid-area: join
@@ -227,6 +231,7 @@ main
     body
         
     main
+        margin-top: 20%
         width: 573px
         height: 700px
 
@@ -235,28 +240,47 @@ main
         height: 481px
         grid-template-columns: 150px 423px
         grid-template-rows: repeat(4, 1fr)
-        grid-template-areas: "img prest" "stats stats" "contact contact"
+        grid-template-areas: "prest prest" "stats stats" "contact contact"
 
     
 
-.img
-    margin-left: -10px
-    margin-top: -10px
-
-.prest
-    
-    h1
-        margin: 0
-        font-size: 26px
-        line-height: 39px
-    h2
-        margin: 0
-        font-size: 16px
-        line-height: 24px
-
-    p
-        font-size: 15px
-        line-height: 22px
 
 
-        
+    .prest
+        grid-template-rows: repeat(3, 1fr)
+        grid-template-areas: "image nom nom" "image join join" "prof prof prof"
+        h1
+            margin: 0
+            font-size: 26px
+            line-height: 39px
+        h2
+            margin: 0
+            font-size: 16px
+            line-height: 24px
+
+        p
+            font-size: 15px
+            line-height: 22px
+
+    .nom
+        margin-top: 12%
+        margin-left: 8%
+
+    .join
+        margin: 0%
+        margin-left: 8%
+        margin-top: 1%
+
+    .prof
+        margin-top: 5%
+        margin-left: 6.8%
+        margin-right: 5%
+
+
+    .stats
+        display: flex
+        justify-content: center
+        width: 550px
+            
+    .contact
+        margin-left: 8.5%
