@@ -292,5 +292,19 @@ main {
     margin-left: 8.5%;
   }
 }
+@media only screen and (max-width: 320px) {
+  main {
+    width: 90vw;
+  }
+
+  .img img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .prest h1 {
+    margin: 0;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
