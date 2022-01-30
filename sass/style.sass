@@ -98,9 +98,12 @@ main
 
 .prest
     max-height: 200px
-    display: flex
-    flex-direction: row
+    width: 100%
     grid-area: prest
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(2, 1fr)
+    grid-template-areas: "nom join" "prof prof"
     h1
         font-size: 26px
         margin-top: 48px 
@@ -115,19 +118,19 @@ main
     p
         color: #4B6A9B
 
-.join
-    position: absolute
-    right: 30.9%
+.nom
+    grid-area: nom
+    margin-top: 28px 
+
+.prof
+    grid-area: prof
+    margin-top: 2%
 
 .join
-    display: flex
-    justify-content: flex-end
-    margin-left: 26.5%
     grid-area: join
-    p
-        margin-top: 48px
-        margin-right: 49px
-        color: #697C9A
+    margin-top: 13% 
+    margin-left: 26%
+
 
 .stats
     
@@ -234,15 +237,14 @@ main
         grid-template-rows: repeat(4, 1fr)
         grid-template-areas: "img prest" "stats stats" "contact contact"
 
-.prest
-    flex-direction: column
+    
 
 .img
     margin-left: -10px
     margin-top: -10px
 
 .prest
-    margin-left: 10%
+    
     h1
         margin: 0
         font-size: 26px
