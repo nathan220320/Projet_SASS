@@ -69,7 +69,7 @@ main {
   color: #FFFFFF;
 }
 
-.result {
+#result {
   margin-top: 3.5%;
   width: 100%;
   height: 419px;
@@ -238,7 +238,7 @@ main {
     height: 700px;
   }
 
-  .result {
+  #result {
     display: grid;
     height: 481px;
     grid-template-columns: 150px 423px;
