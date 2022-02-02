@@ -14,6 +14,7 @@ lune.addEventListener('click', function(){
     if( click % 2 == 1 ){ 
     document.body.style.background = "#141D2F";
     resultat.style.background = "#1E2A47";
+    resultat.style.boxShadow = "none";
     search.style.background = "#1E2A47";
     stats.style.background = "#141D2F";
     input.style.background = "#1E2A47";
