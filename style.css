@@ -142,7 +142,7 @@ main {
 .stats .back {
   margin-top: 38px;
   height: 85px;
-  width: 480px;
+  width: 90%;
   background: #97979721;
   border-radius: 15px;
   display: flex;
@@ -194,6 +194,7 @@ main {
 }
 
 .contact {
+  width: 90%;
   grid-area: contact;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -291,20 +292,21 @@ main {
   .stats {
     display: flex;
     justify-content: center;
-    width: 550px;
+    width: 100%;
   }
 
   .contact {
     margin-left: 8.5%;
   }
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 428px) {
   main {
-    width: 90vw;
+    width: 90%;
   }
 
   #result {
-    width: 90vw;
+    grid-template-columns: 30% 70%;
+    width: 100%;
   }
 
   .search input {
@@ -317,24 +319,24 @@ main {
 
   .img img {
     margin: 0;
-    margin-top: 15%;
-    margin-left: 10%;
+    margin-top: 25%;
+    margin-left: 27%;
     width: 70px;
     height: 70px;
   }
 
   .prest {
-    grid-template-columns: 17% 80%;
+    grid-template-columns: 24% 80%;
     grid-template-rows: 30%;
   }
 
   .nom {
     margin: 0;
-    margin-top: 2%;
+    margin-top: 9%;
   }
   .nom h1 {
     font-size: 16px;
-    line-height: 15px;
+    line-height: 18px;
   }
   .nom h2 {
     font-size: 13px;
@@ -342,9 +344,32 @@ main {
 
   .join {
     margin: 0;
+    margin-top: 5%;
   }
   .join p {
     font-size: 13px;
+  }
+
+  .prof {
+    border: solid 1px #000;
+    width: 90%;
+    height: 100%;
+    margin: 0;
+  }
+  .prof p {
+    word-wrap: break-word;
+  }
+
+  .stats {
+    width: 90%;
+  }
+
+  .back {
+    width: 90%;
+  }
+
+  .rslt1 p {
+    font-size: 10px;
   }
 }
 

@@ -7,7 +7,7 @@ $primary: #FEFEFE
 $bord-rad: 15px
 $color-ctn: #0079FF
 $margin: 10%
-$phone: "only screen and (max-width: 425px)"
+$phone: "only screen and (max-width: 428px)"
 
 *
     font-family: monospace
@@ -146,7 +146,7 @@ main
     .back
         margin-top: 38px
         height: 85px
-        width: 480px
+        width: 90%
         background: #97979721
         border-radius: $bord-rad
         display: flex
@@ -192,6 +192,7 @@ main
     
 
 .contact
+    width: 90%
     grid-area: contact
     display: grid
     grid-template-columns: repeat(2, 1fr)
@@ -284,7 +285,7 @@ main
     .stats
         display: flex
         justify-content: center
-        width: 550px
+        width: 100%
             
     .contact
         margin-left: 8.5%
@@ -293,10 +294,11 @@ main
 @media #{$phone}
 
     main
-        width: 90vw
+        width: 90%
 
     #result
-        width: 90vw  
+        grid-template-columns: 30% 70%
+        width: 100% 
     .search
         input
             font-size: 13px
@@ -311,14 +313,14 @@ main
     .img
         img
             margin: 0
-            margin-top: 15%
-            margin-left: 10%
+            margin-top: 25%
+            margin-left: 27%
             width: 70px
             height: 70px
 
     .prest
 
-        grid-template-columns: 17% 80% 
+        grid-template-columns: 24% 80% 
         grid-template-rows: 30%
 
           
@@ -327,11 +329,11 @@ main
     .nom
 
         margin: 0
-        margin-top: 2%
+        margin-top: 9%
 
         h1
             font-size: 16px
-            line-height: 15px
+            line-height: 18px
             
 
         h2
@@ -340,5 +342,27 @@ main
 
     .join
         margin: 0
+        margin-top: 5% 
         p
+    
             font-size: 13px
+
+    .prof
+        border: $border
+        width: 90%
+        height: 100%
+        margin: 0
+        
+        p
+           word-wrap: break-word
+        
+
+    .stats
+        width: 90%
+
+    .back
+        width: 90% 
+
+    .rslt1
+        p
+            font-size: 10px
