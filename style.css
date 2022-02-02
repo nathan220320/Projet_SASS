@@ -298,18 +298,53 @@ main {
     margin-left: 8.5%;
   }
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 425px) {
   main {
     width: 90vw;
   }
 
+  #result {
+    width: 90vw;
+  }
+
+  .search input {
+    font-size: 13px;
+  }
+  .search button {
+    width: 45%;
+    height: 80%;
+  }
+
   .img img {
+    margin: 0;
+    margin-top: 15%;
+    margin-left: 10%;
     width: 70px;
     height: 70px;
   }
 
-  .prest h1 {
+  .prest {
+    grid-template-columns: 17% 80%;
+    grid-template-rows: 30%;
+  }
+
+  .nom {
     margin: 0;
+    margin-top: 2%;
+  }
+  .nom h1 {
+    font-size: 16px;
+    line-height: 15px;
+  }
+  .nom h2 {
+    font-size: 13px;
+  }
+
+  .join {
+    margin: 0;
+  }
+  .join p {
+    font-size: 13px;
   }
 }
 
