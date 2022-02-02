@@ -14,13 +14,14 @@ lune.addEventListener('click', function(){
     if( click % 2 == 1 ){ 
     document.body.style.background = "#141D2F";
     resultat.style.background = "#1E2A47";
-    resultat.style.boxShadow = "none";
+    resultat.style.boxShadow = "0px 0px 0px 0px rgba(70, 96, 187, 0)";
     search.style.background = "#1E2A47";
+    search.style.boxShadow = "0px 0px 0px 0px rgba(70, 96, 187, 0)";
     stats.style.background = "#141D2F";
     input.style.background = "#1E2A47";
     document.body.style.color = "#FFFFFF";
-    soleil.style.visibility = "visible";
-    lune.style.visibility = "hidden";
+    soleil.style.display = "flex";
+    lune.style.display = "none";
     p.forEach(element => element.style.color = "#FFFFFF");
     i.forEach(element => element.style.color = "#FFFFFF");
     input.style.color = "#FFFFFF";
@@ -34,14 +35,17 @@ soleil.addEventListener('click', function(){
     if(click % 2 == 0){
         document.body.style.background = "#F6F8FF";
         resultat.style.background = "#FEFEFE";
+        resultat.style.boxShadow = "0px 16px 30px -10px rgba(70, 96, 187, 0.198567)"
         search.style.background = "#FEFEFE";
+        search.style.boxShadow = "0px 16px 30px -10px rgba(70, 96, 187, 0.198567)"
         stats.style.background = "#97979721";
         input.style.background = "#FEFEFE";
         document.body.style.color = "#2B3442";
-        soleil.style.visibility = "hidden";
-        lune.style.visibility = "visible";
+        soleil.style.display = "none";
+        lune.style.display = "flex";
         p.forEach(element => element.style.color = "#4B6A9B");
-        i.forEach(element => element.style.color = "#4B6A9B");  
+        i.forEach(element => element.style.color = "#4B6A9B");
+        input.style.color = "#222731";  
     }
 
 })
