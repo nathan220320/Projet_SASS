@@ -1,6 +1,6 @@
 const lune = document.getElementById('lune')
 let resultat = document.getElementById('result')
-let search = document.querySelector('.ctn-search')
+let ctnsearch = document.querySelector('.ctn-search')
 let stats = document.querySelector('.back')
 let input = document.querySelector('input')
 let p = document.querySelectorAll('p')
@@ -16,8 +16,8 @@ lune.addEventListener('click', function(){
     document.body.style.background = "#141D2F";
     resultat.style.background = "#1E2A47";
     resultat.style.boxShadow = "0px 0px 0px 0px rgba(70, 96, 187, 0)";
-    search.style.background = "#1E2A47";
-    search.style.boxShadow = "0px 0px 0px 0px rgba(70, 96, 187, 0)";
+    ctnsearch.style.background = "#1E2A47";
+    ctnsearch.style.boxShadow = "0px 0px 0px 0px rgba(70, 96, 187, 0)";
     stats.style.background = "#141D2F";
     input.style.background = "#1E2A47";
     document.body.style.color = "#FFFFFF";
@@ -37,8 +37,8 @@ soleil.addEventListener('click', function(){
         document.body.style.background = "#F6F8FF";
         resultat.style.background = "#FEFEFE";
         resultat.style.boxShadow = "0px 16px 30px -10px rgba(70, 96, 187, 0.198567)"
-        search.style.background = "#FEFEFE";
-        search.style.boxShadow = "0px 16px 30px -10px rgba(70, 96, 187, 0.198567)"
+        ctnsearch.style.background = "#FEFEFE";
+        ctnsearch.style.boxShadow = "0px 16px 30px -10px rgba(70, 96, 187, 0.198567)"
         stats.style.background = "#97979721";
         input.style.background = "#FEFEFE";
         document.body.style.color = "#2B3442";
@@ -56,6 +56,23 @@ soleil.addEventListener('click', function(){
 form.addEventListener('submit', function(e){
     e.preventDefault()
 
-    let 
-})
+    let search = document.getElementById('search').value
+    let originalName = search.split(' ').join('')
+
+    alert(originalName)
+
+    fetch("https://api.github.com/users/"+originalName)
+    .then((result) => result.json())
+    .then((data) => {
+        console.log(data)
+
+        document.getElementById('img').src =`${data.avatar_url}` ;
+        document.getElementById('h1').textContent = `${data.name}`;
+        document.getElementById('h2').textContent = "@" + `${data.login}`;
+        document.getElementById('prof').textContent = `${data.bio}`;
+        document.getElementById('join').textContent = `${data.created_at}`;
+        document.getElementById('adresse').textContent = `${data.location}`;
+        document.getElementById('blog').textContent =`${data.html_url}`
+    })
+}) 
 
