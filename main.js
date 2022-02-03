@@ -1,11 +1,12 @@
 const lune = document.getElementById('lune')
 let resultat = document.getElementById('result')
-let search = document.querySelector('.search')
+let search = document.querySelector('.ctn-search')
 let stats = document.querySelector('.back')
-let input = document.getElementById('input')
+let input = document.querySelector('input')
 let p = document.querySelectorAll('p')
 let soleil = document.getElementById('soleil')
 let i = document.querySelectorAll('i')
+let form = document.getElementById('myForm')
 
 let click = 0
 
@@ -49,3 +50,12 @@ soleil.addEventListener('click', function(){
     }
 
 })
+
+// -----------------------------------------------------------------------------------------------------------------------------------------
+
+form.addEventListener('submit', function(e){
+    e.preventDefault()
+
+    let 
+})
+

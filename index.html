@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.0.1/d3.v3.min.js"></script>
     <title>Projet SASS</title>
 </head>
 <body>
@@ -16,10 +17,12 @@
                 <img id="soleil" src="soleil.svg" alt="icon de soleil pour le mode clair">
             </div>
         </div>
-        <div class="search">
+        <div class="ctn-search">
+            <form id="myForm" action="">
             <img src="loupe.svg" alt="icon de loupe pour l'input">
-            <input id="input" type="text" placeholder="Search GitHub username…">
+            <input id="search" type="text" placeholder="Search GitHub username…" required>
             <button>Search</button>
+            </form>
         </div>
         <div id="result">
             <div class="prest">
