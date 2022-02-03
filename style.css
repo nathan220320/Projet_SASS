@@ -68,6 +68,9 @@ main {
   flex-direction: row;
   justify-content: space-between;
 }
+.ctn-search form img {
+  margin-left: 3%;
+}
 .ctn-search input {
   border-radius: 15px;
   border: none;
