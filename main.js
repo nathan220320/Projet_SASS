@@ -8,6 +8,7 @@ let soleil = document.getElementById('soleil')
 let i = document.querySelectorAll('i')
 let form = document.getElementById('myForm')
 let twitter = document.getElementById('twiter').textContent
+const clr = "#4B6A9B"
 
 let click = 0
 
@@ -27,6 +28,7 @@ lune.addEventListener('click', function(){
     p.forEach(element => element.style.color = "#FFFFFF");
     i.forEach(element => element.style.color = "#FFFFFF");
     input.style.color = "#FFFFFF";
+    
     }
 
 })
@@ -48,11 +50,18 @@ soleil.addEventListener('click', function(){
         p.forEach(element => element.style.color = "#4B6A9B");
         i.forEach(element => element.style.color = "#4B6A9B");
         input.style.color = "#222731";  
+        document.querySelector('.rslt1').style.color = "#2B3442";
+        document.querySelector('.rslt2').style.color = "#2B3442";
+        document.querySelector('.rslt3').style.color = "#2B3442";
+        document.querySelector('.titre').style.color = "#2B3442";
     }
 
 })
 
 // -----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 form.addEventListener('submit', function(e){
     e.preventDefault()
@@ -66,16 +75,66 @@ form.addEventListener('submit', function(e){
     .then((result) => result.json())
     .then((data) => {
         console.log(data)
+    
+       
 
         document.getElementById('img').src =`${data.avatar_url}` ;
         document.getElementById('h1').textContent = `${data.name}`;
         document.getElementById('h2').textContent = "@" + `${data.login}`;
-        document.getElementById('prof').textContent = `${data.bio}`;
-        document.getElementById('join').textContent = `${data.created_at}`;
-        document.getElementById('adresse').textContent = `${data.location}`;
+
+        if(data.bio == null){
+
+            document.getElementById('prof').textContent = "This profile has no bio";
+    
+        }else{
+            document.getElementById('prof').textContent = `${data.bio}`;
+        }
+        
+        
+        let date = new Date(data.created_at)
+        let jour = date.getDate();
+        let mois = date.getMonth();
+        let anner = date.getFullYear();
+        let moilettre = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+        document.getElementById('join').textContent = "Joined" + " " + jour + " " + moilettre[mois]  + " " + anner;
+        
+        if(data.location == null){
+            document.getElementById('adresse').textContent = "Not Avaible";
+            document.getElementById('adresse').style.color = "#9A9A9A";
+            document.querySelector('.fa-map-marker-alt').style.color = "#9A9A9A";
+        }else{
+            document.getElementById('adresse').textContent = `${data.location}`;
+            document.getElementById('adresse').style.color = clr;
+            i.forEach(element => element.style.color = clr);
+
+        }
+
         document.getElementById('blog').textContent =`${data.html_url}`;
-        document.getElementById('git').textContent =`${data.company}`;
-        document.getElementById('twiter').textContent = `${data.twitter_username}`;
+        if(data.company == null){
+            document.getElementById('git').textContent = "Not Avaible";
+            document.getElementById('git').style.color = "#9A9A9A";
+            document.querySelector('.fa-building').style.color = "#9A9A9A";
+        }else{
+            document.getElementById('git').textContent = `${data.company}`;
+            document.getElementById('git').style.color = clr;
+            i.forEach(element => element.style.color = clr);
+
+        }
+        
+        if(data.twitter_username == null){
+            document.getElementById('twiter').textContent = "Not Avaible";
+            document.getElementById('twiter').style.color = "#9A9A9A";
+            document.querySelector('.fa-twitter').style.color = "#9A9A9A";
+        }else{
+            document.getElementById('twiter').textContent = `${data.twitter_username}`;
+            document.getElementById('twiter').style.color = clr;
+            i.forEach(element => element.style.color = clr);
+
+        }
+            
+    
+
         document.querySelector('.rslt1').textContent = `${data.public_repos}`;
         document.querySelector('.rslt2').textContent = `${data.followers}`;
         document.querySelector('.rslt3').textContent = `${data.following}`;
