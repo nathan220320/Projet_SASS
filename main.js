@@ -7,6 +7,7 @@ let p = document.querySelectorAll('p')
 let soleil = document.getElementById('soleil')
 let i = document.querySelectorAll('i')
 let form = document.getElementById('myForm')
+let twitter = document.getElementById('twiter').textContent
 
 let click = 0
 
@@ -72,7 +73,45 @@ form.addEventListener('submit', function(e){
         document.getElementById('prof').textContent = `${data.bio}`;
         document.getElementById('join').textContent = `${data.created_at}`;
         document.getElementById('adresse').textContent = `${data.location}`;
-        document.getElementById('blog').textContent =`${data.html_url}`
+        document.getElementById('blog').textContent =`${data.html_url}`;
+        document.getElementById('git').textContent =`${data.company}`;
+        document.getElementById('twiter').textContent = `${data.twitter_username}`;
+        document.querySelector('.rslt1').textContent = `${data.public_repos}`;
+        document.querySelector('.rslt2').textContent = `${data.followers}`;
+        document.querySelector('.rslt3').textContent = `${data.following}`;
+       
     })
 }) 
 
+// avatar_url: "https://avatars.githubusercontent.com/u/10130?v=4"
+// bio: null
+// blog: ""
+// company: null
+// created_at: "2008-05-13T04:46:13Z"
+// email: null
+// events_url: "https://api.github.com/users/anthony/events{/privacy}"
+// followers: 29
+// followers_url: "https://api.github.com/users/anthony/followers"
+// following: 10
+// following_url: "https://api.github.com/users/anthony/following{/other_user}"
+// gists_url: "https://api.github.com/users/anthony/gists{/gist_id}"
+// gravatar_id: ""
+// hireable: null
+// html_url: "https://github.com/anthony"
+// id: 10130
+// location: "Melbourne, Australia"
+// login: "anthony"
+// name: "Anthony Langhorne"
+// node_id: "MDQ6VXNlcjEwMTMw"
+// organizations_url: "https://api.github.com/users/anthony/orgs"
+// public_gists: 1
+// public_repos: 1
+// received_events_url: "https://api.github.com/users/anthony/received_events"
+// repos_url: "https://api.github.com/users/anthony/repos"
+// site_admin: false
+// starred_url: "https://api.github.com/users/anthony/starred{/owner}{/repo}"
+// subscriptions_url: "https://api.github.com/users/anthony/subscriptions"
+// twitter_username: null
+// type: "User"
+// updated_at: "2021-11-15T00:57:16Z"
+// url: "https://api.github.com/users/anthony
