@@ -1,5 +1,5 @@
 * {
-  font-family: monospace;
+  font-family: "Space Mono", monospace;
   font-size: 15px;
   margin: 0;
   padding: 0;
@@ -35,10 +35,6 @@ main {
   font-size: 26px;
 }
 
-.icon {
-  border: solid 1px #000;
-}
-
 #lune {
   display: flex;
 }
@@ -63,13 +59,16 @@ main {
   margin-left: 32px;
 }
 .ctn-search form {
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
 }
 .ctn-search form img {
   margin-left: 3%;
+  width: 4%;
 }
 .ctn-search input {
   border-radius: 15px;
@@ -117,13 +116,12 @@ main {
 .prest h1 {
   font-size: 26px;
   margin-top: 16%;
-  margin-bottom: 20px;
   font-weight: bold;
 }
 .prest h2 {
   font-size: 22px;
   color: #0079FF;
-  margin-bottom: 33px;
+  margin-bottom: 6%;
 }
 .prest p {
   color: #4B6A9B;
@@ -154,65 +152,29 @@ main {
 
 .join {
   grid-area: join;
-  margin-top: 13%;
+  margin-top: 17%;
   margin-left: 26%;
 }
 
 .stats {
   grid-area: stats;
+  width: 95%;
 }
 .stats .back {
-  margin-top: 38px;
-  height: 85px;
-  width: 90%;
+  height: 100%;
+  width: 100%;
   background: #97979721;
   border-radius: 15px;
   display: flex;
   align-items: center;
-  flex-direction: column;
-}
-
-.haut {
-  width: 100%;
-  display: flex;
+  justify-content: space-evenly;
   flex-direction: row;
   color: #4B6A9B;
-  margin-top: 15px;
 }
-
-.repos {
-  margin-left: 6%;
-}
-
-.follower {
-  margin-left: 20%;
-}
-
-.following {
-  margin-left: 15%;
-}
-
-.bas {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  margin-top: 5px;
-}
-.bas p {
+.stats .rslt {
   font-weight: bold;
-  font-size: 1.8rem;
-}
-
-.rslt1 {
-  margin-left: 6%;
-}
-
-.rslt2 {
-  margin-left: 25%;
-}
-
-.rslt3 {
-  margin-left: 18.5%;
+  font-size: 1.4rem;
+  color: #2B3442;
 }
 
 .contact {
@@ -277,6 +239,10 @@ main {
     grid-template-areas: "prest prest" "stats stats" "contact contact";
   }
 
+  form input {
+    margin-left: 2%;
+  }
+
   .prest {
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas: "image nom nom" "image join join" "prof prof prof";
@@ -284,16 +250,13 @@ main {
   .prest h1 {
     margin: 0;
     font-size: 26px;
-    line-height: 39px;
   }
   .prest h2 {
     margin: 0;
     font-size: 16px;
-    line-height: 24px;
   }
   .prest p {
     font-size: 15px;
-    line-height: 22px;
   }
 
   .nom {
@@ -316,11 +279,24 @@ main {
   .stats {
     display: flex;
     justify-content: center;
-    width: 100%;
+    margin-left: 5%;
+    margin-top: 7%;
+    width: 90%;
+    height: 80%;
   }
 
   .contact {
     margin-left: 8.5%;
+    margin-top: 5%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .nom {
+    margin-left: 15%;
+  }
+
+  .join {
+    margin-left: 15%;
   }
 }
 @media only screen and (max-width: 428px) {
@@ -336,10 +312,11 @@ main {
 
   .ctn-search input {
     font-size: 13px;
+    margin-left: 3%;
   }
   .ctn-search button {
-    width: 45%;
-    height: 80%;
+    width: 55%;
+    height: 85%;
   }
 
   .img #img {
@@ -386,11 +363,6 @@ main {
     word-wrap: break-word;
   }
 
-  .stats {
-    width: 100%;
-    margin-left: 2%;
-  }
-
   .back {
     width: 100%;
   }
@@ -415,14 +387,6 @@ main {
     font-size: 16px;
   }
 
-  .rslt {
-    margin: 0;
-  }
-
-  .rslt1, .rslt2, .rslt3 {
-    margin-right: 7%;
-  }
-
   .contact {
     grid-template-columns: 1fr 0;
     grid-template-rows: repeat(4, 1fr);
@@ -444,6 +408,28 @@ main {
 
   .twiter p {
     margin-left: 6%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .nom {
+    margin-left: 10%;
+  }
+
+  .join {
+    margin-left: 10%;
+  }
+}
+@media only screen and (max-width: 240px) {
+  .nom {
+    margin-left: 10%;
+  }
+
+  .join {
+    margin-left: 10%;
+  }
+
+  .stats {
+    margin-top: 25%;
   }
 }
 

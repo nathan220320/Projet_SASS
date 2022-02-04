@@ -8,9 +8,12 @@ $bord-rad: 15px
 $color-ctn: #0079FF
 $margin: 10%
 $phone: "only screen and (max-width: 428px)"
+$tablette: "only screen and (max-width: 550px)"
+$phone2: "only screen and (max-width: 360px)"
+$phone3: "only screen and (max-width: 240px)"
 
 *
-    font-family: monospace
+    font-family: 'Space Mono', monospace
     font-size: 15px
     margin: 0
     padding: 0
@@ -41,7 +44,7 @@ main
     
 .icon
     
-    border: $border
+    
     
 
 #lune
@@ -63,12 +66,16 @@ main
         margin-left: 32px
 
     form
+       
+        height: 100%
         width: 100%
         display: flex
         flex-direction: row
+        align-items: center
         justify-content: space-between
         img
             margin-left: 3%
+            width: 4%
         
 
     input
@@ -122,13 +129,12 @@ main
     h1
         font-size: 26px
         margin-top: 16% 
-        margin-bottom: 20px
         font-weight: bold
 
     h2
         font-size: 22px
         color: $color-ctn
-        margin-bottom: 33px
+        margin-bottom: 6%
 
     p
         color: #4B6A9B
@@ -158,60 +164,35 @@ main
 
 .join
     grid-area: join
-    margin-top: 13% 
+    margin-top: 17% 
     margin-left: 26%
 
 
 .stats
     
     grid-area: stats
+    width: 95%
     .back
-        margin-top: 38px
-        height: 85px
-        width: 90%
+        height: 100%
+        width: 100%
         background: #97979721
         border-radius: $bord-rad
         display: flex
         align-items: center
-        flex-direction: column
-
-.haut
-    width: $taille
-    display: flex
-    flex-direction: row
+        justify-content: space-evenly
+        flex-direction: row
+        color: #4B6A9B
     
-    color: #4B6A9B
-    margin-top: 15px
-
-.repos
-    margin-left: 6% 
-
-.follower
-    margin-left: 20%
-
-.following
-    margin-left: 15%
-
-.bas
-    width: $taille
-    display: flex
-    flex-direction: row
-    margin-top: 5px
-    p
+    .rslt
         font-weight: bold
-        font-size: 1.8rem
+        font-size: 1.4rem
+        color: #2B3442
 
 
-.rslt1
-    margin-left: 6%
 
-.rslt2
-    margin-left: 25%
-
-.rslt3
-    margin-left: 18.5%
-        
     
+
+
 
 .contact
     width: 90%
@@ -274,7 +255,9 @@ main
         grid-template-areas: "prest prest" "stats stats" "contact contact"
 
     
-
+    form
+        input
+            margin-left: 2%
 
 
     .prest
@@ -283,15 +266,15 @@ main
         h1
             margin: 0
             font-size: 26px
-            line-height: 39px
+            
         h2
             margin: 0
             font-size: 16px
-            line-height: 24px
+            
 
         p
             font-size: 15px
-            line-height: 22px
+            
 
     .nom
         margin-top: 12%
@@ -312,10 +295,22 @@ main
     .stats
         display: flex
         justify-content: center
-        width: 100%
+        margin-left: 5%
+        margin-top: 7%
+        width: 90%
+        height: 80%
             
     .contact
         margin-left: 8.5%
+        margin-top: 5%
+
+@media #{$tablette}
+    .nom
+        margin-left: 15%
+
+    .join
+        margin-left: 15%
+
 
 
 @media #{$phone}
@@ -330,12 +325,14 @@ main
         width: 100% 
         height: 80%
     .ctn-search
+        
         input
             font-size: 13px
+            margin-left: 3%
 
         button
-            width: 45%
-            height: 80%
+            width: 55%
+            height: 85%
 
 
 
@@ -388,9 +385,8 @@ main
            word-wrap: break-word
         
 
-    .stats
-        width: 100%
-        margin-left: 2%
+
+    
         
 
     .back
@@ -413,11 +409,7 @@ main
         p
             font-size: 16px
 
-    .rslt
-        margin: 0
    
-    .rslt1, .rslt2, .rslt3
-        margin-right: 7%
     .contact
         grid-template-columns: 1fr 0
         grid-template-rows: repeat(4, 1fr)
@@ -439,3 +431,20 @@ main
     .twiter
         p
             margin-left: 6%
+
+@media #{$phone2}
+    .nom
+        margin-left: 10%
+        
+    .join
+        margin-left: 10%
+
+@media #{$phone3}
+    .nom
+        margin-left: 10%
+        
+    .join
+        margin-left: 10%
+
+    .stats
+        margin-top: 25%
