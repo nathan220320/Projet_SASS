@@ -28,6 +28,7 @@ lune.addEventListener('click', function(){
     p.forEach(element => element.style.color = "#FFFFFF");
     i.forEach(element => element.style.color = "#FFFFFF");
     input.style.color = "#FFFFFF";
+    document.getElementById('blog').style.color = "#FFFFFF";
     
     }
 
@@ -54,6 +55,7 @@ soleil.addEventListener('click', function(){
         document.querySelector('.rslt2').style.color = "#2B3442";
         document.querySelector('.rslt3').style.color = "#2B3442";
         document.querySelector('.titre').style.color = "#2B3442";
+        document.getElementById('blog').style.color = "#4B6A9B";
     }
 
 })

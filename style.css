@@ -235,6 +235,14 @@ main {
   margin-top: 2%;
 }
 
+#blog {
+  text-decoration: none;
+  color: #4B6A9B;
+}
+#blog:hover {
+  text-decoration: underline;
+}
+
 .git {
   grid-area: git;
   display: flex;
