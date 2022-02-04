@@ -49,9 +49,18 @@ main
 
 #lune
     display: flex
+    &:hover
+            path
+                fill: #222731
+
+            cursor: url(./img/pointer.svg),pointer
 
 #soleil
     display: none
+    &:hover
+            path
+                fill: #90A4D4 
+            cursor: url(./img/pointer.svg),pointer
     
     
 .ctn-search
@@ -86,6 +95,9 @@ main
         outline: none
         color: $color-ctn
         font-size: 18px
+        &:hover
+            
+            cursor: url(./img/pointer.svg),pointer
 
     button
         width: 106px
@@ -96,6 +108,10 @@ main
         margin-right: 10px
         font-weight: bold
         color: #FFFFFF
+        &:hover
+            background: #60ABFF
+            cursor: url(./img/pointer.svg),pointer
+
 
 
 

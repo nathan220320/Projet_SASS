@@ -38,9 +38,21 @@ main {
 #lune {
   display: flex;
 }
+#lune:hover {
+  cursor: url(./img/pointer.svg), pointer;
+}
+#lune:hover path {
+  fill: #222731;
+}
 
 #soleil {
   display: none;
+}
+#soleil:hover {
+  cursor: url(./img/pointer.svg), pointer;
+}
+#soleil:hover path {
+  fill: #90A4D4;
 }
 
 .ctn-search {
@@ -79,6 +91,9 @@ main {
   color: #0079FF;
   font-size: 18px;
 }
+.ctn-search input:hover {
+  cursor: url(./img/pointer.svg), pointer;
+}
 .ctn-search button {
   width: 106px;
   height: 50px;
@@ -88,6 +103,10 @@ main {
   margin-right: 10px;
   font-weight: bold;
   color: #FFFFFF;
+}
+.ctn-search button:hover {
+  background: #60ABFF;
+  cursor: url(./img/pointer.svg), pointer;
 }
 
 #result {
