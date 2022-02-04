@@ -241,6 +241,7 @@ main {
 }
 #blog:hover {
   text-decoration: underline;
+  cursor: url(./img/pointer.svg), pointer;
 }
 
 .git {
