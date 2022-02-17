@@ -76,6 +76,13 @@ main
 
     form
        
+        p
+            color: #F74646
+            width: 15%
+            margin-right: 2%
+            font-weight: bold
+            display: none
+
         height: 100%
         width: 100%
         display: flex
@@ -91,9 +98,10 @@ main
         border-radius: $bord-rad
         border: none
         width: 60%
+        height: 100%
         margin-right: 100px 
         outline: none
-        color: $color-ctn
+        color: #000000
         font-size: 18px
         &:hover
             
@@ -347,14 +355,18 @@ main
         width: 100% 
         height: 80%
     .ctn-search
-        
+        p
+            font-size: 13px
+            margin-right: 5%
         input
             font-size: 13px
             margin-left: 3%
+            width: 70%
 
         button
+            font-size: 13px
             width: 55%
-            height: 85%
+            height: 65%
 
 
 
@@ -454,12 +466,18 @@ main
         p
             margin-left: 6%
 
+    .rslt
+        p
+    
+            font-size: 10px
+
 @media #{$phone2}
     .nom
         margin-left: 10%
         
     .join
         margin-left: 10%
+
 
 @media #{$phone3}
     .nom
